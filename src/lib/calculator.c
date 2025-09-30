@@ -1,4 +1,4 @@
-#include "./../../include/calculatrice.h"
+#include "./../../include/calculator.h"
 
 double _add(double a, double b) {
     return a + b;
