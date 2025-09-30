@@ -9,7 +9,7 @@ include_directories(include)
 # Création de l'exécutable à partir des sources
 add_executable(calculator
     src/main.c
-    src/lib/calculatrice.c
+    src/lib/calculator.c
 )
 
 # Activer les tests
@@ -29,3 +29,4 @@ set_tests_properties(Division PROPERTIES PASS_REGULAR_EXPRESSION "5")
 
 add_test(NAME Carre COMMAND calculator car 5)
 set_tests_properties(Carre PROPERTIES PASS_REGULAR_EXPRESSION "25")
+
