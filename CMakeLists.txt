@@ -7,7 +7,7 @@ include_directories(include)
 
 add_executable(calculator
     src/main.c
-    src/include/calculatrice.c
+    src/lib/calculatrice.c
 )
 
 # Tests automatiques
@@ -27,4 +27,5 @@ set_tests_properties(Division PROPERTIES PASS_REGULAR_EXPRESSION "5")
 
 add_test(NAME Carre COMMAND calculator car 5)
 set_tests_properties(Carre PROPERTIES PASS_REGULAR_EXPRESSION "25")
+
 
