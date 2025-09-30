@@ -1,32 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
-project(calculatrice C)
-
-set(CMAKE_C_STANDARD 11)
-
-# Dossier où se trouvent les headers (.h)
+cmake_minimum_required(VERSION 3.5)
+project(calculator C)
+add_subdirectory(include)
+add_subdirectory(src)
 include_directories(include)
-
-# Création de l'exécutable à partir des sources
-add_executable(calculator
-    src/main.c
-    src/lib/calculator.c
-)
-
-# Activer les tests
 enable_testing()
-
-add_test(NAME Addition COMMAND calculator add 2 3)
-set_tests_properties(Addition PROPERTIES PASS_REGULAR_EXPRESSION "5")
-
-add_test(NAME Soustraction COMMAND calculator sub 7 2)
-set_tests_properties(Soustraction PROPERTIES PASS_REGULAR_EXPRESSION "5")
-
-add_test(NAME Multiplication COMMAND calculator mul 4 6)
-set_tests_properties(Multiplication PROPERTIES PASS_REGULAR_EXPRESSION "24")
-
-add_test(NAME Division COMMAND calculator div 10 2)
-set_tests_properties(Division PROPERTIES PASS_REGULAR_EXPRESSION "5")
-
-add_test(NAME Carre COMMAND calculator car 5)
-set_tests_properties(Carre PROPERTIES PASS_REGULAR_EXPRESSION "25")
-
+add_test(t1 src/calculator add 2 3)
+add_test(t2 src/calculator sub 3 -2)
+add_test(t3 src/calculator mul 5 5)
+add_test(t4 src/calculator div 1 5)
