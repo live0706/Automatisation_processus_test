@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "./../../include/calculator.h"
 
 double _add(double a, double b) {
